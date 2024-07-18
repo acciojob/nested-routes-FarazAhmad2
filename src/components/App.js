@@ -2,11 +2,11 @@ import React from "react";
 import "./../styles/App.css";
 import { Link, Route, Routes } from "react-router-dom";
 import Home from "./Home";
-import Women from "./Women";
 import Grooming from "./products/Grooming";
 import Shirt from "./products/Shirt";
 import Trouser from "./products/Trouser";
 import Jewellery from "./products/Jewellery";
+import Layout from "./Layout";
 
 const App = () => {
   return (
@@ -23,7 +23,7 @@ const App = () => {
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/women/*" element={<Women />}>
+        <Route path="/women/*" element={<Layout />}>
           <Route path="grooming" element={<Grooming />} />
           <Route path="shirt" element={<Shirt />} />
           <Route path="trouser" element={<Trouser />} />

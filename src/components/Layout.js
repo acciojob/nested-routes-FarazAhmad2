@@ -1,8 +1,9 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
-const Women = () => {
+const Layout = () => {
   return (
+    <main>
     <div>
       <p>Women Items:</p>
       <nav>
@@ -23,7 +24,8 @@ const Women = () => {
       </nav>
       <Outlet />  
     </div>
+    </main>
   );
 };
 
-export default Women;
+export default Layout;
