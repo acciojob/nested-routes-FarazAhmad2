@@ -1,37 +1,29 @@
+
 import React from "react";
-import "./../styles/App.css";
+import './../styles/App.css';
 import { Link, Route, Routes } from "react-router-dom";
+import Women from "./Women";
 import Home from "./Home";
-import Grooming from "./products/Grooming";
-import Shirt from "./products/Shirt";
-import Trouser from "./products/Trouser";
-import Jewellery from "./products/Jewellery";
-import Layout from "./Layout";
 
 const App = () => {
   return (
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/women">Women</Link>
-          </li>
-        </ul>
-      </nav>
+    <main>
+<div>
+  <nav>
+  <ul>
+        <li><Link to='' >Home</Link></li>
+        <li><Link to='/women'>Women</Link></li>
+      </ul>
+  </nav>
+     
       <Routes>
+        <Route path="/women/*" element={<Women />} />
         <Route path="/" element={<Home />} />
-        <Route path="/women/*" element={<Layout />}>
-          <Route path="grooming" element={<Grooming />} />
-          <Route path="shirt" element={<Shirt />} />
-          <Route path="trouser" element={<Trouser />} />
-          <Route path="jewellery" element={<Jewellery />} />
-        </Route>
       </Routes>
+        {/* Do not remove the main div */}
     </div>
-  );
-};
+    </main>
+  )
+}
 
-export default App;
+export default App
